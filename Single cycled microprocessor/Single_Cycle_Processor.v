@@ -23,47 +23,49 @@
 module Single_Cycle_Processor(
 
 input CLK,
-output [7:0] Result 
+output [7:0] result 
    );
 wire pcsrc;
 wire [7:0] pcnext;
 wire [7:0] pc;
-wire [7:0] instr;
+wire [15:0] instr;
 wire [7:0] SrcA;
 wire [7:0] SrcB;
 wire Zero;
 wire [7:0] ALUResult;
 wire [3:0] ALUControl;
 wire ALUSrc, ResultSrc;
-wire pcsrc;
 wire [7:0] pcplus1;
 wire [7:0] pctarget;
 wire [2:0] a1, a2, a3;
 wire [3:0] opcode;
 wire [2:0] funct;
-wire [7:0] writedata;
+wire [7:0] SrcB_reg;
 wire [7:0] result;
 wire [7:0] read_data;
 wire MemWrite;
 wire regwrite;
+wire [7:0] ImmExt; //To extender
 
 MUX_2x1 start(.ino(pcplus1), .in1(pctarget), .select(pcsrc), .out0(pcnext));
 assign pcplus1 = pc + 1;
+assign pctarget = pc + ImmExt;
 //assign pcnext = pcsrc ? pctarget : pcplus1;
 
 
 pc p0(.pcnext(pcnext), .pc(pc), .clk(CLK));
 Instruction_memory i0(.address(pc), .instruction(instr));
-assign opcode = instr[3:0];
-assign a1 = instr[6:4];  //Destination register 
-assign funct = instr[9:7];
-assign a2 = instr[12:10];
-assign a3 = instr[15:13];
+assign opcode = instr[15:12];
+assign a1 = instr[8:6];  //Destination register 
+assign funct = instr[11:9];
+assign a2 = instr[5:3];
+assign a3 = instr[2:0];
+Extender e0(.in0(a3), .ImmExt(ImmExt));
 ControlUnit c0(.opcode(opcode), .funct(funct), .Zero(Zero), .ALUSrc(ALUSrc), .MemWrite(MemWrite), .ALUControl(ALUControl), .ResultSrc(ResultSrc), .PCSrc(pcsrc), .RegWrite(regwrite));
-Register_file r0(.clk(CLK), .write(regwrite), .destreg(a1), .srcreg(a2), .srcreg(a3), .rdata1(SrcA), .rdata2(writedata), .wrtdata(result));
-MUX_2x1 alu(.in0(SrcA), .in1(writedata), .select(ALUSrc), .out0(SrcB));
+Register_file r0(.clk(CLK), .write(regwrite), .destreg(a1), .srcreg1(a2), .srcreg2(a3), .rdata1(SrcA), .rdata2(SrcB_reg), .wrtdata(result));
+MUX_2x1 alu(.in0(SrcB_reg), .in1(ImmExt), .select(ALUSrc), .out0(SrcB));
 ALU a0( .SrcA(SrcA), .SrcB(SrcB), .Zero(Zero), .ALUResult(ALUResult), .ALUControl(ALUControl));
-DataMemory d0(.CLK(CLK), .MemWrite(MemWrite), .ALUResult(ALUResult), .WriteData(writedata), .ReadData(read_data));
+DataMemory d0(.CLK(CLK), .MemWrite(MemWrite), .ALUResult(ALUResult), .WriteData(SrcB_reg), .ReadData(read_data));
 MUX_2x1 read(.in0(ALUResult), .in1(read_data), .select(ResultSrc), .out0(result));
 
 

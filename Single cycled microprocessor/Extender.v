@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 21.06.2025 21:40:31
+// Create Date: 23.06.2025 21:55:35
 // Design Name: 
-// Module Name: MUX 2x1
+// Module Name: Extender
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,9 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUX_2x1(
-input [7:0] in0, input [7:0] in1, input select, output [7:0] out0
+module Extender(
+input [2:0] in0, output [7:0] ImmExt
     );
-    
-    assign out0 = (select ==0) ? in0 : in1;
+   assign ImmExt = {{5{in0[2]}}, in0}; 
 endmodule
