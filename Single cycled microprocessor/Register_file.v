@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module Register_file(rdata1, rdata2, wrtData, srcreg1, srcreg2, destreg, write, clk);
 input clk, write;
 input [2:0] srcreg1, srcreg2, destreg;

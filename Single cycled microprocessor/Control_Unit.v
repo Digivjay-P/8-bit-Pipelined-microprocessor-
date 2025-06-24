@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 1ps
+
 
 module ControlUnit(
     input [3:0] opcode,
@@ -60,6 +60,9 @@ parameter ALU_AND         = 4'b1100;
 parameter ALU_OR          = 4'b1101;
 parameter ALU_NOT         = 4'b1110;
 parameter ALU_XOR         = 4'b1111;
+parameter ALU_RIGHT_SHIFT = 4'b0110;
+parameter ALU_LEFT_SHIFT  = 4'b0111;
+parameter ALU_EQUAL_TO    = 4'b0101;
 
 always @(*) begin
     RegWrite    = 0;
@@ -82,6 +85,7 @@ always @(*) begin
                 F_OR:       ALUControl = ALU_OR;
                 F_XOR:      ALUControl = ALU_XOR;
                 F_NOT:      ALUControl = ALU_NOT;
+               
             endcase
         end
 
@@ -106,7 +110,7 @@ always @(*) begin
         end
 
         OP_EQUAL_TO: begin
-            ALUControl = OP_EQUAL_TO;
+            ALUControl = ALU_EQUAL_TO;
             PCSrc      = Zero;
         end
 
@@ -117,15 +121,17 @@ always @(*) begin
         OP_RIGHT_SHIFT: begin
             RegWrite   = 1;
             ALUSrc     = 0;
-            ALUControl = OP_RIGHT_SHIFT;
+            ALUControl = ALU_RIGHT_SHIFT;
         end
 
         OP_LEFT_SHIFT: begin
             RegWrite   = 1;
             ALUSrc     = 0;
-            ALUControl = OP_LEFT_SHIFT;
+            ALUControl = ALU_LEFT_SHIFT;
         end
+        default: ALUControl = 4'b0000;
     endcase
+         
 end
 
 endmodule

@@ -21,7 +21,8 @@
 
 module pc(pc, clk, pcnext);
 input clk;
-output reg [7:0] pc, pcnext;
+input [7:0] pcnext;
+output reg [7:0] pc;
 initial begin
 pc = 8'b0;
 end
