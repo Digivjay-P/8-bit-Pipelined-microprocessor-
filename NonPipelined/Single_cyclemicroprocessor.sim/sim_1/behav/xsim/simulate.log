@@ -1,0 +1,183 @@
+Time resolution is 1 ps
+Simulation Start
+ControlUnit: opcode=0001, funct=000, RegWrite=x, ALUControl=xxxx
+ALU: SrcA=  0, SrcB=  X, ALUControl=xxxx, ALUResult=  x
+ALU: SrcA=  0, SrcB=  2, ALUControl=1000, ALUResult=  0
+ControlUnit: opcode=0001, funct=000, RegWrite=1, ALUControl=1000
+ControlUnit: opcode=0001, funct=000, RegWrite=1, ALUControl=1000
+ControlUnit: opcode=0000, funct=000, RegWrite=1, ALUControl=1000
+ALU: SrcA=  2, SrcB=  2, ALUControl=1000, ALUResult=  2
+ControlUnit: opcode=0000, funct=001, RegWrite=1, ALUControl=1000
+ALU: SrcA=  4, SrcB=  2, ALUControl=1000, ALUResult=  4
+ALU: SrcA=  4, SrcB=  2, ALUControl=1001, ALUResult=  6
+Time=26000 PC=3 Instr=0319 ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1001
+ALU: SrcA=  2, SrcB=  2, ALUControl=1001, ALUResult=  2
+ALU: SrcA=  2, SrcB=  2, ALUControl=1100, ALUResult=  0
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1100
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1100
+Time=35000 PC=4 Instr=098a ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1100
+ALU: SrcA=  5, SrcB=  2, ALUControl=1100, ALUResult=  2
+ALU: SrcA=  5, SrcB=  2, ALUControl=1111, ALUResult=  0
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+Time=45000 PC=5 Instr=0daa ALUResult=  7 WriteData=  7 RegWrite=1 MemWrite=0
+ALU: SrcA=  2, SrcB=  2, ALUControl=1111, ALUResult=  7
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+Time=55000 PC=6 Instr=0dca ALUResult=  0 WriteData=  0 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=111, RegWrite=1, ALUControl=1111
+ALU: SrcA=  2, SrcB=  0, ALUControl=1111, ALUResult=  0
+ALU: SrcA=  2, SrcB=  0, ALUControl=1110, ALUResult=  2
+ControlUnit: opcode=0000, funct=111, RegWrite=1, ALUControl=1110
+Time=65000 PC=7 Instr=0f48 ALUResult=253 WriteData=253 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=010, RegWrite=1, ALUControl=1110
+ALU: SrcA=  2, SrcB=  2, ALUControl=1110, ALUResult=253
+ALU: SrcA=  2, SrcB=  2, ALUControl=1010, ALUResult=253
+Time=75000 PC=8 Instr=058a ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=011, RegWrite=1, ALUControl=1010
+ALU: SrcA=  2, SrcB=  2, ALUControl=1011, ALUResult=  4
+Time=85000 PC=9 Instr=07ca ALUResult=  1 WriteData=  1 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=1011
+ALU: SrcA=  2, SrcB=  0, ALUControl=1011, ALUResult=  1
+ALU: SrcA=  2, SrcB=  0, ALUControl=0111, ALUResult=  0
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=0111
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=0111
+Time=95000 PC=10 Instr=7108 ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0110, funct=000, RegWrite=1, ALUControl=0111
+ALU: SrcA=  2, SrcB=  0, ALUControl=0110, ALUResult=  4
+Time=105000 PC=11 Instr=6108 ALUResult=  1 WriteData=  1 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0101, funct=001, RegWrite=1, ALUControl=0110
+ALU: SrcA=  0, SrcB=  0, ALUControl=0110, ALUResult=  1
+ALU: SrcA=  0, SrcB=  0, ALUControl=0101, ALUResult=  0
+ControlUnit: opcode=0101, funct=001, RegWrite=0, ALUControl=0101
+ControlUnit: opcode=0101, funct=001, RegWrite=0, ALUControl=0101
+Time=115000 PC=12 Instr=5280 ALUResult=  1 WriteData=  1 RegWrite=0 MemWrite=0
+ControlUnit: opcode=0100, funct=000, RegWrite=0, ALUControl=0101
+ALU: SrcA=  0, SrcB=  2, ALUControl=0101, ALUResult=  1
+ALU: SrcA=  0, SrcB=  2, ALUControl=0000, ALUResult=  0
+ControlUnit: opcode=0100, funct=000, RegWrite=0, ALUControl=0000
+Time=125000 PC=13 Instr=4002 ALUResult=  0 WriteData=  0 RegWrite=0 MemWrite=0
+ControlUnit: opcode=0000, funct=000, RegWrite=0, ALUControl=0000
+ALU: SrcA=  2, SrcB=  2, ALUControl=0000, ALUResult=  0
+ALU: SrcA=  2, SrcB=  2, ALUControl=1000, ALUResult=  0
+ControlUnit: opcode=0000, funct=000, RegWrite=1, ALUControl=1000
+Time=135000 PC=2 Instr=00ca ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=001, RegWrite=1, ALUControl=1000
+ALU: SrcA=  4, SrcB=  2, ALUControl=1000, ALUResult=  4
+ALU: SrcA=  4, SrcB=  2, ALUControl=1001, ALUResult=  6
+Time=145000 PC=3 Instr=0319 ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1001
+ALU: SrcA=  2, SrcB=  2, ALUControl=1001, ALUResult=  2
+ALU: SrcA=  2, SrcB=  2, ALUControl=1100, ALUResult=  0
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1100
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1100
+Time=155000 PC=4 Instr=098a ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1100
+ALU: SrcA=253, SrcB=  2, ALUControl=1100, ALUResult=  2
+ALU: SrcA=253, SrcB=  2, ALUControl=1111, ALUResult=  0
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+Time=165000 PC=5 Instr=0daa ALUResult=255 WriteData=255 RegWrite=1 MemWrite=0
+ALU: SrcA=  2, SrcB=  2, ALUControl=1111, ALUResult=255
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+Time=175000 PC=6 Instr=0dca ALUResult=  0 WriteData=  0 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=111, RegWrite=1, ALUControl=1111
+ALU: SrcA=  2, SrcB=  0, ALUControl=1111, ALUResult=  0
+ALU: SrcA=  2, SrcB=  0, ALUControl=1110, ALUResult=  2
+ControlUnit: opcode=0000, funct=111, RegWrite=1, ALUControl=1110
+Time=185000 PC=7 Instr=0f48 ALUResult=253 WriteData=253 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=010, RegWrite=1, ALUControl=1110
+ALU: SrcA=  2, SrcB=  2, ALUControl=1110, ALUResult=253
+ALU: SrcA=  2, SrcB=  2, ALUControl=1010, ALUResult=253
+Time=195000 PC=8 Instr=058a ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=011, RegWrite=1, ALUControl=1010
+ALU: SrcA=  2, SrcB=  2, ALUControl=1011, ALUResult=  4
+Time=205000 PC=9 Instr=07ca ALUResult=  1 WriteData=  1 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=1011
+ALU: SrcA=  2, SrcB=  0, ALUControl=1011, ALUResult=  1
+ALU: SrcA=  2, SrcB=  0, ALUControl=0111, ALUResult=  0
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=0111
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=0111
+Time=215000 PC=10 Instr=7108 ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0110, funct=000, RegWrite=1, ALUControl=0111
+ALU: SrcA=  2, SrcB=  0, ALUControl=0110, ALUResult=  4
+Time=225000 PC=11 Instr=6108 ALUResult=  1 WriteData=  1 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0101, funct=001, RegWrite=1, ALUControl=0110
+ALU: SrcA=  0, SrcB=  0, ALUControl=0110, ALUResult=  1
+ALU: SrcA=  0, SrcB=  0, ALUControl=0101, ALUResult=  0
+ControlUnit: opcode=0101, funct=001, RegWrite=0, ALUControl=0101
+ControlUnit: opcode=0101, funct=001, RegWrite=0, ALUControl=0101
+Time=235000 PC=12 Instr=5280 ALUResult=  1 WriteData=  1 RegWrite=0 MemWrite=0
+ControlUnit: opcode=0100, funct=000, RegWrite=0, ALUControl=0101
+ALU: SrcA=  0, SrcB=  2, ALUControl=0101, ALUResult=  1
+ALU: SrcA=  0, SrcB=  2, ALUControl=0000, ALUResult=  0
+ControlUnit: opcode=0100, funct=000, RegWrite=0, ALUControl=0000
+Time=245000 PC=13 Instr=4002 ALUResult=  0 WriteData=  0 RegWrite=0 MemWrite=0
+ControlUnit: opcode=0000, funct=000, RegWrite=0, ALUControl=0000
+ALU: SrcA=  2, SrcB=  2, ALUControl=0000, ALUResult=  0
+ALU: SrcA=  2, SrcB=  2, ALUControl=1000, ALUResult=  0
+ControlUnit: opcode=0000, funct=000, RegWrite=1, ALUControl=1000
+Time=255000 PC=2 Instr=00ca ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=001, RegWrite=1, ALUControl=1000
+ALU: SrcA=  4, SrcB=  2, ALUControl=1000, ALUResult=  4
+ALU: SrcA=  4, SrcB=  2, ALUControl=1001, ALUResult=  6
+Time=265000 PC=3 Instr=0319 ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1001
+ALU: SrcA=  2, SrcB=  2, ALUControl=1001, ALUResult=  2
+ALU: SrcA=  2, SrcB=  2, ALUControl=1100, ALUResult=  0
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1100
+ControlUnit: opcode=0000, funct=100, RegWrite=1, ALUControl=1100
+Time=275000 PC=4 Instr=098a ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1100
+ALU: SrcA=253, SrcB=  2, ALUControl=1100, ALUResult=  2
+ALU: SrcA=253, SrcB=  2, ALUControl=1111, ALUResult=  0
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+Time=285000 PC=5 Instr=0daa ALUResult=255 WriteData=255 RegWrite=1 MemWrite=0
+ALU: SrcA=  2, SrcB=  2, ALUControl=1111, ALUResult=255
+ControlUnit: opcode=0000, funct=110, RegWrite=1, ALUControl=1111
+Time=295000 PC=6 Instr=0dca ALUResult=  0 WriteData=  0 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=111, RegWrite=1, ALUControl=1111
+ALU: SrcA=  2, SrcB=  0, ALUControl=1111, ALUResult=  0
+ALU: SrcA=  2, SrcB=  0, ALUControl=1110, ALUResult=  2
+ControlUnit: opcode=0000, funct=111, RegWrite=1, ALUControl=1110
+Time=305000 PC=7 Instr=0f48 ALUResult=253 WriteData=253 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=010, RegWrite=1, ALUControl=1110
+ALU: SrcA=  2, SrcB=  2, ALUControl=1110, ALUResult=253
+ALU: SrcA=  2, SrcB=  2, ALUControl=1010, ALUResult=253
+Time=315000 PC=8 Instr=058a ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=011, RegWrite=1, ALUControl=1010
+ALU: SrcA=  2, SrcB=  2, ALUControl=1011, ALUResult=  4
+Time=325000 PC=9 Instr=07ca ALUResult=  1 WriteData=  1 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=1011
+ALU: SrcA=  2, SrcB=  0, ALUControl=1011, ALUResult=  1
+ALU: SrcA=  2, SrcB=  0, ALUControl=0111, ALUResult=  0
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=0111
+ControlUnit: opcode=0111, funct=000, RegWrite=1, ALUControl=0111
+Time=335000 PC=10 Instr=7108 ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0110, funct=000, RegWrite=1, ALUControl=0111
+ALU: SrcA=  2, SrcB=  0, ALUControl=0110, ALUResult=  4
+Time=345000 PC=11 Instr=6108 ALUResult=  1 WriteData=  1 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0101, funct=001, RegWrite=1, ALUControl=0110
+ALU: SrcA=  0, SrcB=  0, ALUControl=0110, ALUResult=  1
+ALU: SrcA=  0, SrcB=  0, ALUControl=0101, ALUResult=  0
+ControlUnit: opcode=0101, funct=001, RegWrite=0, ALUControl=0101
+ControlUnit: opcode=0101, funct=001, RegWrite=0, ALUControl=0101
+Time=355000 PC=12 Instr=5280 ALUResult=  1 WriteData=  1 RegWrite=0 MemWrite=0
+ControlUnit: opcode=0100, funct=000, RegWrite=0, ALUControl=0101
+ALU: SrcA=  0, SrcB=  2, ALUControl=0101, ALUResult=  1
+ALU: SrcA=  0, SrcB=  2, ALUControl=0000, ALUResult=  0
+ControlUnit: opcode=0100, funct=000, RegWrite=0, ALUControl=0000
+Time=365000 PC=13 Instr=4002 ALUResult=  0 WriteData=  0 RegWrite=0 MemWrite=0
+ControlUnit: opcode=0000, funct=000, RegWrite=0, ALUControl=0000
+ALU: SrcA=  2, SrcB=  2, ALUControl=0000, ALUResult=  0
+ALU: SrcA=  2, SrcB=  2, ALUControl=1000, ALUResult=  0
+ControlUnit: opcode=0000, funct=000, RegWrite=1, ALUControl=1000
+Time=375000 PC=2 Instr=00ca ALUResult=  4 WriteData=  4 RegWrite=1 MemWrite=0
+ControlUnit: opcode=0000, funct=001, RegWrite=1, ALUControl=1000
+ALU: SrcA=  4, SrcB=  2, ALUControl=1000, ALUResult=  4
+ALU: SrcA=  4, SrcB=  2, ALUControl=1001, ALUResult=  6
+Time=385000 PC=3 Instr=0319 ALUResult=  2 WriteData=  2 RegWrite=1 MemWrite=0
+Simulation end..
+$finish called at time : 387 ns : File "C:/Users/digvi/OneDrive/Documents/IITI SoC/Single_cyclemicroprocessor/Single_cyclemicroprocessor.srcs/sources_1/new/SingleCycle.v" Line 449

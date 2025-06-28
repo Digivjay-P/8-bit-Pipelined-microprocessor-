@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ALU_Instructions_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ALU_Instructions" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="25.096 ns"></ZoomEndTime>
+      <Cursor1Time time="0.025 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="341"></NameColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="61" />
+   <wvobject fp_name="/ALU_Instructions/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pcsrc" type="logic">
+      <obj_property name="ElementShortName">pcsrc</obj_property>
+      <obj_property name="ObjectShortName">pcsrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pcnext" type="array">
+      <obj_property name="ElementShortName">pcnext[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pcnext[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pc" type="array">
+      <obj_property name="ElementShortName">pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/instr" type="array">
+      <obj_property name="ElementShortName">instr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/SrcA" type="array">
+      <obj_property name="ElementShortName">SrcA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/SrcB" type="array">
+      <obj_property name="ElementShortName">SrcB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/Zero" type="logic">
+      <obj_property name="ElementShortName">Zero</obj_property>
+      <obj_property name="ObjectShortName">Zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ALUSrc" type="logic">
+      <obj_property name="ElementShortName">ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ResultSrc" type="logic">
+      <obj_property name="ElementShortName">ResultSrc</obj_property>
+      <obj_property name="ObjectShortName">ResultSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pcplus1" type="array">
+      <obj_property name="ElementShortName">pcplus1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pcplus1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pctarget" type="array">
+      <obj_property name="ElementShortName">pctarget[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pctarget[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a1" type="array">
+      <obj_property name="ElementShortName">a1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a2" type="array">
+      <obj_property name="ElementShortName">a2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a3" type="array">
+      <obj_property name="ElementShortName">a3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a3[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/funct" type="array">
+      <obj_property name="ElementShortName">funct[2:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/SrcB_reg" type="array">
+      <obj_property name="ElementShortName">SrcB_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/wrtdata" type="array">
+      <obj_property name="ElementShortName">wrtdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wrtdata[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/read_data" type="array">
+      <obj_property name="ElementShortName">read_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/MemWrite" type="logic">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/regwrite" type="logic">
+      <obj_property name="ElementShortName">regwrite</obj_property>
+      <obj_property name="ObjectShortName">regwrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ImmExt" type="array">
+      <obj_property name="ElementShortName">ImmExt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ImmExt[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a1" type="array">
+      <obj_property name="ElementShortName">a1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/r0/regfile" type="array">
+      <obj_property name="ElementShortName">regfile[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">regfile[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pcsrc" type="logic">
+      <obj_property name="ElementShortName">pcsrc</obj_property>
+      <obj_property name="ObjectShortName">pcsrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pcnext" type="array">
+      <obj_property name="ElementShortName">pcnext[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pcnext[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pc" type="array">
+      <obj_property name="ElementShortName">pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/instr" type="array">
+      <obj_property name="ElementShortName">instr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/SrcA" type="array">
+      <obj_property name="ElementShortName">SrcA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/SrcB" type="array">
+      <obj_property name="ElementShortName">SrcB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/Zero" type="logic">
+      <obj_property name="ElementShortName">Zero</obj_property>
+      <obj_property name="ObjectShortName">Zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ALUSrc" type="logic">
+      <obj_property name="ElementShortName">ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ResultSrc" type="logic">
+      <obj_property name="ElementShortName">ResultSrc</obj_property>
+      <obj_property name="ObjectShortName">ResultSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pcplus1" type="array">
+      <obj_property name="ElementShortName">pcplus1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pcplus1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/pctarget" type="array">
+      <obj_property name="ElementShortName">pctarget[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pctarget[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a1" type="array">
+      <obj_property name="ElementShortName">a1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a2" type="array">
+      <obj_property name="ElementShortName">a2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/a3" type="array">
+      <obj_property name="ElementShortName">a3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a3[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/funct" type="array">
+      <obj_property name="ElementShortName">funct[2:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/SrcB_reg" type="array">
+      <obj_property name="ElementShortName">SrcB_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/wrtdata" type="array">
+      <obj_property name="ElementShortName">wrtdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wrtdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/read_data" type="array">
+      <obj_property name="ElementShortName">read_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/MemWrite" type="logic">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/regwrite" type="logic">
+      <obj_property name="ElementShortName">regwrite</obj_property>
+      <obj_property name="ObjectShortName">regwrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/ImmExt" type="array">
+      <obj_property name="ElementShortName">ImmExt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ImmExt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Instructions/uut/r0/regfile" type="array">
+      <obj_property name="ElementShortName">regfile[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">regfile[0:7][7:0]</obj_property>
+   </wvobject>
+</wave_config>

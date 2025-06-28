@@ -1,0 +1,6 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/digvi/OneDrive/Documents/IITI SoC/Single_cyclemicroprocessor/Single_cyclemicroprocessor.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/digvi/OneDrive/Documents/IITI SoC/Single_cyclemicroprocessor/Single_cyclemicroprocessor.srcs/sources_1/new/SingleCycle.v,1751143201,verilog,,,,ALU;ALU_Instructions;ControlUnit;DataMemory;Extender;Instruction_memory;MUX_2x1;Register_file;Single_Cycle_Processor;pc,,,,,,,,
