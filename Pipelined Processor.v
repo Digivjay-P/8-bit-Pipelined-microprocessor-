@@ -1,21 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company:
-// Engineer:
-// 
-// Create Date: 20.07.2025 16:18:02
-// Design Name:
-// Module Name: Pipelined_Processor
-// Project Name:
-// Target Devices:
-// Tool Versions:
-// Description: 8-bit Pipelined RISC-style Processor
-// 
-// Dependencies: Instruction Memory, Data Memory, Hazard Unit, ALU, Control Unit,
-//               Register File, Pipeline Registers, Extender, Forwarding Logic
-// 
-// Revision: 0.01 - File Created
-//////////////////////////////////////////////////////////////////////////////////
+
 
 module Pipelined_Processor (
     input CLK,
