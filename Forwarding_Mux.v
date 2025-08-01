@@ -24,7 +24,7 @@ input [7:0] Src_in;
 input [7:0] Result;
 input [7:0] ALU_Result;
 input [1:0] forward;
-output [7:0] Src_out;
+output wire [7:0] Src_out;
 
 assign Src_out = (forward == 2'b00) ? Src_in:
                  (forward == 2'b01) ? ALU_Result:
