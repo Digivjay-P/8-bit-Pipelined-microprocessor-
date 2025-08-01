@@ -23,10 +23,11 @@
 module MEM_WB(
   input [7:0] ReadData, ALUResult, pcplus1,
   input [2:0] destreg,
-  input RegWrite, ResultSrc,
+  input RegWrite, ResultSrc,is_matrix_mult,
   output reg [7:0] ReadData_out, ALUResult_out, pcplus1_out,
   output reg [2:0] destreg_out,
   output reg RegWrite_out, ResultSrc_out,
+  output reg is_matrix_mult_out,
   input clk, input reset
 );
 
@@ -34,10 +35,12 @@ module MEM_WB(
     if (reset) begin
       ReadData_out <= 0; ALUResult_out <= 0; pcplus1_out <= 0;
       destreg_out <= 0; RegWrite_out <= 0; ResultSrc_out <= 0;
+      is_matrix_mult_out <= 0;
     end else begin
       ReadData_out <= ReadData; ALUResult_out <= ALUResult; pcplus1_out <= pcplus1;
       destreg_out <= destreg;
       RegWrite_out <= RegWrite; ResultSrc_out <= ResultSrc;
+      is_matrix_mult_out <= is_matrix_mult;
     end
   end
 endmodule
