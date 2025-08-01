@@ -11,14 +11,13 @@ module Register_file(
     write, 
     clk, 
     reset,
-    //is_matrix_mult,
-    //C,
+    A,
+    B,
     ReadDataA0, ReadDataA1, ReadDataA2, ReadDataA3,
     ReadDataB0, ReadDataB1, ReadDataB2, ReadDataB3
 );
 
-//input is_matrix_mult;
-//input [31:0] C;
+output [31:0] A,B;
 input clk, reset, write;
 input [2:0] srcreg1, srcreg2, destreg;
 input [7:0] wrtData;
@@ -36,10 +35,14 @@ assign ReadDataA1 = regfile[1];
 assign ReadDataA2 = regfile[2];
 assign ReadDataA3 = regfile[3];
 
+assign A = {ReadDataA0, ReadDataA1, ReadDataA2, ReadDataA3};
+
 assign ReadDataB0 = regfile[4];
 assign ReadDataB1 = regfile[5];
 assign ReadDataB2 = regfile[6];
 assign ReadDataB3 = regfile[7];
+
+assign B = {ReadDataB0, ReadDataB1, ReadDataB2, ReadDataB3};
 
 always @ (posedge   clk or posedge reset )begin
 if (reset) begin
@@ -47,12 +50,7 @@ if (reset) begin
     regfile[i] <= i;
     end    
 end
-//else if (is_matrix_mult) begin
-    //regfile[0] <= C[7:0];
-    //regfile[1] <= C[15:8];
-    //regfile[2] <= C[23:16];
-    //regfile[3] <= C[31:24];
-//end 
+
 else  if (write) begin 
     regfile[destreg] <= wrtData;
 end
