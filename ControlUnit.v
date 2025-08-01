@@ -62,8 +62,7 @@ parameter ALU_LEFT_SHIFT  = 4'b0111;
     ResultSrc   = 0;
     PCSrc       = 0;
     is_matrix_mult = 0;
-    //write_counter = 0;
-    //matrix_write_in_progress = 0;
+   
 
     case (opcode)
         OP_RTYPE: begin
