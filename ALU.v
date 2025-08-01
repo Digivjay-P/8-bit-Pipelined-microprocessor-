@@ -28,7 +28,7 @@ module ALU(
     output reg Zero
 );
 
-
+reg [7:0] ALUResult_int;
 
 parameter ADD          = 4'b1000;
 parameter SUBTRACT     = 4'b1001;
@@ -50,26 +50,28 @@ always @(*) begin
     // Existing case statement
 
     case (ALUControl)
-        ADD:          ALUResult = SrcA + SrcB;
-        SUBTRACT:     ALUResult = SrcA + (~SrcB + 1'b1);
-        MULTIPLY:     ALUResult = SrcA * SrcB;
+        ADD:          ALUResult_int = SrcA + SrcB;
+        SUBTRACT:     ALUResult_int = SrcA + (~SrcB + 1'b1);
+        MULTIPLY:     ALUResult_int = SrcA * SrcB;
         MATRIX_MULT:  begin
-        ALUResult = 8'b00000000;
+        ALUResult_int = 8'b00000000;
 end
-        AND:          ALUResult = SrcA & SrcB;
-        OR:           ALUResult = SrcA | SrcB;
-        NOT:          ALUResult = ~SrcA;
-        XOR:          ALUResult = SrcA ^ SrcB;
-        Right_Shift:  ALUResult = $signed(SrcA) >>> 1;
-        Left_Shift:   ALUResult = $signed(SrcA) << 1;
-        Equal_to:     ALUResult = (SrcA == SrcB) ? 8'b00000001 : 8'b00000000;
+        AND:          ALUResult_int = SrcA & SrcB;
+        OR:           ALUResult_int = SrcA | SrcB;
+        NOT:          ALUResult_int = ~SrcA;
+        XOR:          ALUResult_int = SrcA ^ SrcB;
+        Right_Shift:  ALUResult_int = $signed(SrcA) >>> 1;
+        Left_Shift:   ALUResult_int = $signed(SrcA) << 1;
+        Equal_to:     ALUResult_int = (SrcA == SrcB) ? 8'b00000001 : 8'b00000000;
         default:   begin
-          ALUResult = 8'b00000000;
+          ALUResult_int = 8'b00000000;
     
         end
     endcase
-      Zero = (ALUResult == 0) ? 1'b1 : 1'b0;
+      ALUResult = ALUResult_int;
+      Zero = (ALUResult_int == 0) ? 1'b1 : 1'b0;
 end
 
 
 endmodule
+
