@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-
 module Pipelined_Processor (
     input CLK,
     input reset,
@@ -30,10 +29,10 @@ wire regwrite_d, regwrite_e, regwrite_m, regwrite_w;
 wire [7:0] ImmExt_d, ImmExt_e;
 wire [1:0] ForwardAE, ForwardBE;
 wire StallF, StallD, FlushD, FlushE;
-wire is_matrix_mult_f, is_matrix_mult_d, is_matrix_mult_e, is_matrix_mult_m; //NEW
+wire is_matrix_mult_f, is_matrix_mult_d, is_matrix_mult_e, is_matrix_mult_m, is_matrix_mult_w; //NEW
 
 wire done;
-wire [31:0] C;
+wire [31:0] C,A,B;
 
 wire [7:0] wb_wrtdata_normal;   
 wire [2:0] wb_destreg_normal;  
@@ -56,31 +55,25 @@ Matrix_Output mat_reg(
     .is_matrix_mult(is_matrix_mult_f),
     .matrix_write_in_progress(matrix_write_in_progress_signal),
     .destreg(wb_destreg_matrix),
-    .wrtdata(wb_wrtdata_matrix),
-    .done(done)
+    .wrtdata(wb_wrtdata_matrix)
+    //.done(done)
 );
 
 Matrix_mult mmult (
     .A(A),
     .B(B),
     .C(C),
-    .done(done)
+    .done(done),
+    .clk (CLK),
+    .reset (reset),
+    .is_matrix_mult(is_matrix_mult_e)
 );
 
-
-MUX_2x1 read (
-    .in0(ALUResult_w),
-    .in1(read_data_w),
-    .select(ResultSrc_w),
-    .out0(wb_wrtdata_normal)
-);
 
 assign wb_destreg_normal = a1_w;
-assign wb_write_normal = regwrite_w;  
-
-
-assign wb_write_matrix =
-                         done ? 1'b0 : matrix_write_in_progress_signal; 
+assign wb_write_normal = regwrite_w;                          //Signals to choose how to wb?
+assign wb_write_matrix = done ? 1'b0 : matrix_write_in_progress_signal;
+                          
 
 MUX_2x1_wb wb_mux (
     .wrtdata0(wb_wrtdata_normal),
@@ -109,14 +102,8 @@ Register_file r0 (
     .rdata1(SrcA_d),
     .rdata2(SrcB_reg),
     .wrtData(wrtdata_final),
-    .ReadDataA0(ReadDataA0),
-    .ReadDataA1(ReadDataA1),
-    .ReadDataA2(ReadDataA2),
-    .ReadDataA3(ReadDataA3),
-    .ReadDataB0(ReadDataB0),
-    .ReadDataB1(ReadDataB1),
-    .ReadDataB2(ReadDataB2),
-    .ReadDataB3(ReadDataB3)
+    .A(A),
+    .B(B)
 );
 
 // IF Stage
@@ -218,23 +205,33 @@ ID_EX l1 (
 );
 
 // Forwarding MUXes for SrcA and SrcB
-Forwarding_Mux m0 (.Src_in(RD1e),
-.Result(write_final),
+Forwarding_Mux m0 (
+.Src_in(RD1e),
+.Result(wrtdata_final),
 .ALU_Result(ALUResult_m),
 .forward(ForwardAE),
 .Src_out(SrcA_e));
 
-Forwarding_Mux m1 (.Src_in(RD2e),
-.Result(write_final),
+Forwarding_Mux m1 (
+.Src_in(RD2e),
+.Result(wrtdata_final),
 .ALU_Result(ALUResult_m),
 .forward(ForwardBE),
 .Src_out(SrcB_reg_e));
 
 // ALU Source selection: Immediate or Register
-MUX_2x1 alu (.in0(SrcB_reg_e),
+MUX_2x1 alu (
+.in0(SrcB_reg_e),
 .in1(ImmExt_e),
 .select(ALUSrc_e),
 .out0(SrcB));
+
+MUX_2x1 read (
+    .in0(ALUResult_w),
+    .in1(read_data_w),
+    .select(ResultSrc_w),
+    .out0(wb_wrtdata_normal)
+);
 
 // ALU Operation
 ALU a0 (
@@ -292,12 +289,14 @@ MEM_WB l3 (
 .destreg(a1_m),
 .RegWrite(regwrite_m),
 .ResultSrc(ResultSrc_m),
+.is_matrix_mult(is_matrix_mult_m),
 .ReadData_out(read_data_w),
 .ALUResult_out(ALUResult_w),
 .pcplus1_out(pcplus1_w),
 .destreg_out(a1_w),
 .RegWrite_out(regwrite_w),
-.ResultSrc_out(ResultSrc_w)
+.ResultSrc_out(ResultSrc_w),
+.is_matrix_mult_out(is_matrix_mult_w)
 );
 
 
