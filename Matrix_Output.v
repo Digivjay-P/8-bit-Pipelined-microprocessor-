@@ -3,7 +3,7 @@ module Matrix_Output(
     input reset,
     input [31:0] C,
     input is_matrix_mult,
-    input done,
+    //input done,
     output reg [2:0] destreg,
     output reg [7:0] wrtdata,
     output reg matrix_write_in_progress
@@ -38,6 +38,7 @@ always @(posedge clk or posedge reset) begin
 
             if (write_counter == 2'd3) begin
                 matrix_write_in_progress <= 0;
+                
             end
         end
     end
