@@ -15,6 +15,8 @@ Welcome to the repository for my custom-designed **8-bit microprocessor system**
 | [`Modules`](./Modules)                                                      | Modular Verilog components (ALU, Control Unit, Register File, etc.)        |
 | [`NonPipelined/Single_cyclemicroprocessor`](./NonPipelined)            | Fully working 8-bit non-pipelined processor design                          |
 | [`Pipelined Processor with Hazard Unit`](./Pipelined%20Processor%20with%20Hazard%20Unit) | Pipelined processor with forwarding, stalling & hazard detection |
+| [`FPGA Implementation in Progress`](./Bonus_SoC) | Voice amplitude recognition LED Control |
+| [`Presentation`](./8%20bit%20Microprocessor%20(1)) | Pipelined processor with forwarding, stalling & hazard detection |
 | [`README.md`](./README.md)                                                  | You're here!                                                                |
 
 ---
