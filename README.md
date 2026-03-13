@@ -61,16 +61,16 @@ The pipelined processor improves throughput by executing multiple instructions s
 
 | Folder / File | Description |
 |---|---|
-| `Assembler/` | Python-based assembler to convert assembly code to machine code |
-| `Modules/` | Modular Verilog components (ALU, Control Unit, Register File, etc.) |
-| `NonPipelined/` | Implementation of the **single-cycle microprocessor** |
+| [Assembler](./Assembler) | Python-based assembler to convert assembly code to machine code |
+| [Modules](./Modules) | Modular Verilog components (ALU, Control Unit, Register File, etc.) |
+| [NonPipelined](./NonPipelined) | Implementation of the **single-cycle microprocessor** |
 | `Pipelined Processor with Hazard Unit/` | Full **5-stage pipelined processor implementation** |
 | `Matrix Multiplication/` | Assembly-level matrix multiplication program |
 | `Bonus Program 1/` | Additional test programs |
 | `Final Synthesizable/` | Clean synthesizable Verilog modules |
-| `Bonus_SoC/` | FPGA implementation (voice amplitude recognition LED control) |
+| [FPGA implementation](./Bonus_SoC) | FPGA implementation |
 | `Presentation/` | Project presentation materials |
-| `README.md` | Project documentation |
+| [README.md](./README.md) | Project documentation |
 
 ---
 
