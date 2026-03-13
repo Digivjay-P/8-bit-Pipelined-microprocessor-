@@ -1,60 +1,124 @@
-# 🧠 8-Bit Microprocessor Project (Pipelined + Non-Pipelined)
+# 🧠 8-Bit Microprocessor Project  
+### Single-Cycle & Pipelined RISC Processor in Verilog
 
-Welcome to the repository for my custom-designed **8-bit microprocessor system**, featuring both **single-cycle** and **pipelined** architectures. This project showcases my end-to-end implementation of a RISC-style processor, assembler, and test programs, all designed in Verilog and simulated using Vivado.
+This repository contains the implementation of a **custom 8-bit RISC-style microprocessor**, developed as a **team project**. The system includes both a **single-cycle processor** and a **5-stage pipelined processor with hazard handling**, along with a **custom assembler and assembly programs**.
 
----
-
-## 🗂️ Repository Structure
-
-| Folder / File                                                                 | Description                                                                 |
-|------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| [`Assembler`](./Assembler)                                                  | Custom assembler scripts to convert `.txt` programs into machine code       |
-| [`Bonus Program 1`](./Bonus%20Program%201)                                   | Extra custom program files for testing and showcasing capabilities         |
-| [`Final Synthesizable`](./Final%20Synthesizable)                             | Cleaned, final versions of synthesizable Verilog modules                    |
-| [`Matrix Multiplication`](./Matrix%20Multiplication)                         | Assembly-level matrix multiplication implementation                        |
-| [`Modules`](./Modules)                                                      | Modular Verilog components (ALU, Control Unit, Register File, etc.)        |
-| [`NonPipelined/Single_cyclemicroprocessor`](./NonPipelined)            | Fully working 8-bit non-pipelined processor design                          |
-| [`Pipelined Processor with Hazard Unit`](./Pipelined%20Processor%20with%20Hazard%20Unit) | Pipelined processor with forwarding, stalling & hazard detection |
-| [`FPGA Implementation in Progress`](./Bonus_SoC) | Voice amplitude recognition LED Control |
-| [`Presentation`](./8%20bit%20Microprocessor%20(1)) | Pipelined processor with forwarding, stalling & hazard detection |
-| [`README.md`](./README.md)                                                  | You're here!                                                                |
+The project demonstrates the **complete design flow of a processor**, from ISA design and hardware implementation to assembler development and program execution.
 
 ---
 
-## 🚀 Features
+# 🧱 Processor Architectures
 
-### ✅ Core Features
+## Single Cycle Processor
 
-- **8-bit Custom ISA**
-- **Assembler**: Written in Python, converts assembly code to binary machine code
-- **Single-Cycle Processor**: Fully functional, with ALU, memory, and control logic
-- **Pipelined Processor**: Includes 5-stage pipeline with:
-  - Instruction Fetch (IF)
-  - Instruction Decode (ID)
-  - Execute (EX)
-  - Memory Access (MEM)
-  - Write-back (WB)
-- **Hazard Detection Unit**: Implements data forwarding and stalling
+<p align="center">
+  <img src="Single_Cycle_datapath.jpeg" width="700">
+</p>
 
-### 📈 Additional Programs
+The single-cycle processor executes every instruction in **one clock cycle**, making the datapath straightforward and easy to analyze.
 
-- Matrix Multiplication (Assembly)
-- Bonus programs for extended testing
+### Key Components
 
----
+- Program Counter (PC)
+- Instruction Memory
+- Control Unit
+- Register File
+- ALU
+- Data Memory
+- Sign Extender
 
-## 🛠️ Tools Used
-
-- **Verilog HDL** – Hardware description and simulation
-- **Python** – For assembler scripting
-- **Vivado** – Synthesis and simulation
-- **Git** – Version control
+This architecture was first implemented to validate the **ISA design and instruction execution flow** before extending the design into a pipelined processor.
 
 ---
 
-## 🔧 Usage Instructions
+## Pipelined Processor
 
-1. **Assemble your program:**
+<p align="center">
+  <img src="Pipelined_Microprocessor_datapath.jpeg" width="700">
+</p>
+
+The pipelined processor improves throughput by executing multiple instructions simultaneously using a **5-stage pipeline**.
+
+### Pipeline Stages
+
+| Stage | Description |
+|------|-------------|
+| IF | Instruction Fetch |
+| ID | Instruction Decode |
+| EX | Execute |
+| MEM | Memory Access |
+| WB | Write Back |
+
+### Additional Features
+
+- **Forwarding Unit** for resolving data hazards
+- **Hazard Detection Unit** for pipeline stalling
+- **Pipeline Registers** between stages
+
+---
+
+# 🗂️ Repository Structure
+
+| Folder / File | Description |
+|---|---|
+| `Assembler/` | Python-based assembler to convert assembly code to machine code |
+| `Modules/` | Modular Verilog components (ALU, Control Unit, Register File, etc.) |
+| `NonPipelined/` | Implementation of the **single-cycle microprocessor** |
+| `Pipelined Processor with Hazard Unit/` | Full **5-stage pipelined processor implementation** |
+| `Matrix Multiplication/` | Assembly-level matrix multiplication program |
+| `Bonus Program 1/` | Additional test programs |
+| `Final Synthesizable/` | Clean synthesizable Verilog modules |
+| `Bonus_SoC/` | FPGA implementation (voice amplitude recognition LED control) |
+| `Presentation/` | Project presentation materials |
+| `README.md` | Project documentation |
+
+---
+
+# 🚀 Features
+
+### Core Features
+
+- Custom **8-bit Instruction Set Architecture**
+- **Single-Cycle Processor Implementation**
+- **5-Stage Pipelined Processor**
+- **Hazard Detection and Forwarding**
+- Modular Verilog-based hardware design
+- Custom **Python assembler**
+
+---
+
+# 📈 Example Programs
+
+The processor has been tested with multiple assembly programs including:
+
+- Matrix Multiplication
+- Arithmetic operation tests
+- Memory load/store programs
+- Additional benchmark programs
+
+These programs verify:
+
+- Instruction execution
+- Register operations
+- Memory access
+- Pipeline hazard handling
+
+---
+
+# 🛠️ Tools Used
+
+| Tool | Purpose |
+|----|----|
+| **Verilog HDL** | Hardware design |
+| **Python** | Assembler implementation |
+| **Vivado** | Simulation and synthesis |
+| **Git / GitHub** | Version control |
+
+---
+
+# 🔧 Usage Instructions
+
+### 1️⃣ Assemble a Program
 
 ```bash
 cd Assembler/
