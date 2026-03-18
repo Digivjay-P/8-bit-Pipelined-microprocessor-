@@ -1,4 +1,4 @@
-# 🧠 8-Bit Microprocessor Project  
+# 8-Bit Microprocessor Project  
 ### Single-Cycle & Pipelined RISC Processor in Verilog
 
 This repository contains the implementation of a **custom 8-bit RISC-style microprocessor**, developed as a **team project**. The system includes both a **single-cycle processor** and a **5-stage pipelined processor with hazard handling**, along with a **custom assembler and assembly programs**.
@@ -7,7 +7,7 @@ The project demonstrates the **complete design flow of a processor**, from ISA d
 
 ---
 
-# 🧱 Processor Architectures
+# Processor Architectures
 
 ## Single Cycle Processor
 
@@ -57,7 +57,7 @@ The pipelined processor improves throughput by executing multiple instructions s
 
 ---
 
-# 🗂️ Repository Structure
+# Repository Structure
 
 | Folder / File | Description |
 |---|---|
@@ -74,7 +74,7 @@ The pipelined processor improves throughput by executing multiple instructions s
 
 ---
 
-# 🚀 Features
+# Features
 
 ### Core Features
 
@@ -87,7 +87,7 @@ The pipelined processor improves throughput by executing multiple instructions s
 
 ---
 
-# 📈 Example Programs
+# Example Programs
 
 The processor has been tested with multiple assembly programs including:
 
@@ -105,7 +105,7 @@ These programs verify:
 
 ---
 
-# 🛠️ Tools Used
+# Tools Used
 
 | Tool | Purpose |
 |----|----|
@@ -116,9 +116,9 @@ These programs verify:
 
 ---
 
-# 🔧 Usage Instructions
+# Usage Instructions
 
-### 1️⃣ Assemble a Program
+### Assemble a Program
 
 ```bash
 cd Assembler/
